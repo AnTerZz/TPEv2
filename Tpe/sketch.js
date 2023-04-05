@@ -43,12 +43,12 @@ function draw() {
 
 	//Calcul Portance
 	var Rz = (Patm * sq(sVitesse.value() * (514/1000)) * (142/10) * (sIncidence.value()/10))/2;
-	text("Portance : " + nfc(Rz,0) N,120,30);
+	text("Portance : " + nfc(Rz,0) + " N",120,30);
 
 	//Calcul Trainée
 	var Cx = ((5/100) + ((sq(11/100)*sq(sIncidence.value()))/(PI*(535/100)*(7/10))));
 	var Rx = (Patm * sq(sVitesse.value() * (514/1000)) * (142/10) * Cx)/2;
-	text("Traînée : " + nfc(Rx,0) N,120,60);
+	text("Traînée : " + nfc(Rx,0) + " N",120,60);
 
 	strokeWeight(4);
 	stroke(255, 0, 0);
